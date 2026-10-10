@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { Leaf } from "lucide-react"
+import { Leaf, Tractor } from "lucide-react"
 import { CensoForm } from "@/components/censo-form"
+import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "Censo de Comercios - No Se Bota",
+  title: "Censo de Comercios - La Ñapa",
   description: "Registra tu negocio y cuentanos sobre tus excedentes de comida. Juntos podemos reducir el desperdicio alimentario en Cucuta.",
 }
 
@@ -19,6 +20,13 @@ export default function CensoPage() {
             </div>
             <span className="font-bold text-xl text-foreground">La Ñapa</span>
           </Link>
+
+          <Button variant="outline" asChild size="sm">
+            <Link href="/censo/campesinos">
+              <Tractor className="w-4 h-4 mr-2" />
+              ¿Eres productor del campo?  Ir al Censo Campesino
+            </Link>
+          </Button>
         </div>
       </header>
 

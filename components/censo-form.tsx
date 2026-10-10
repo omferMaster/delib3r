@@ -11,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Spinner } from "@/components/ui/spinner"
-import { createClient } from "@/lib/supabase/client"
+import { submitCenso } from "@/app/actions/censo"
 import { Store, Package, Lightbulb, CheckCircle2, ArrowLeft, ArrowRight } from "lucide-react"
 
 const TIPO_NEGOCIO_OPTIONS = [
@@ -261,8 +261,6 @@ export function CensoForm() {
     setSubmitError(null)
 
     try {
-      const supabase = createClient()
-      
       const dataToInsert = {
         nombre_negocio: formData.nombre_negocio,
         tipo_negocio: formData.tipo_negocio === "Otro" ? formData.tipo_negocio_otro : formData.tipo_negocio,
@@ -284,9 +282,11 @@ export function CensoForm() {
         comentarios_adicionales: formData.comentarios_adicionales || null,
       }
 
-      const { error } = await supabase.from("censo_comercios").insert([dataToInsert])
+      const result = await submitCenso(dataToInsert)
 
-      if (error) throw error
+      if (!result.success) {
+        throw new Error(result.error || "Error al enviar el formulario")
+      }
 
       router.push("/censo/gracias")
     } catch (error) {

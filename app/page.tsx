@@ -23,12 +23,23 @@ export default function HomePage() {
               Beneficios
             </Link>
             <Link href="/censo" className="text-muted-foreground hover:text-foreground transition-colors">
-              Registra tu negocio
+              Negocios
+            </Link>
+            <Link href="/censo/campesinos" className="text-muted-foreground hover:text-foreground transition-colors">
+              Campesinos
             </Link>
           </nav>
-          <Button asChild>
-            <Link href="/censo">Unete ahora</Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" asChild size="sm" className="hidden sm:inline-flex">
+              <Link href="/censo/campesinos">
+                <Tractor className="w-4 h-4 mr-1 text-primary" />
+                Campesinos
+              </Link>
+            </Button>
+            <Button asChild size="sm">
+              <Link href="/censo">Comercios</Link>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -48,16 +59,17 @@ export default function HomePage() {
               Conectamos restaurantes, panaderias y comercios de Cucuta con personas que quieren
               aprovechar excedentes de comida a precios increibles. Juntos reducimos el desperdicio alimentario.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" asChild className="text-base">
                 <Link href="/censo">
                   <Store className="w-5 h-5 mr-2" />
                   Registra tu negocio
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-base">
-                <Link href="#como-funciona">
-                  Conoce mas
+              <Button size="lg" variant="secondary" asChild className="text-base border border-border">
+                <Link href="/censo/campesinos">
+                  <Tractor className="w-5 h-5 mr-2 text-primary" />
+                  Soy productor del campo
                 </Link>
               </Button>
             </div>
