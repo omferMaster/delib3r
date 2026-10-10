@@ -29,46 +29,49 @@ export default function HomePage() {
               Campesinos
             </Link>
           </nav>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" asChild size="sm" className="hidden sm:inline-flex">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <Button variant="outline" asChild size="sm" className="text-xs sm:text-sm px-2.5 sm:px-3">
               <Link href="/censo/campesinos">
-                <Tractor className="w-4 h-4 mr-1 text-primary" />
-                Campesinos
+                <Tractor className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 text-primary shrink-0" />
+                <span className="hidden xs:inline">Censo </span>Campesinos
               </Link>
             </Button>
-            <Button asChild size="sm">
-              <Link href="/censo">Comercios</Link>
+            <Button asChild size="sm" className="text-xs sm:text-sm px-2.5 sm:px-3">
+              <Link href="/censo">
+                <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 shrink-0 sm:hidden" />
+                <span className="hidden xs:inline">Censo </span>Comercios
+              </Link>
             </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
         <div className="max-w-6xl mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Leaf className="w-4 h-4" />
-              Movimiento anti-desperdicio en el área metropolitana de Cúcuta
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-6 max-w-full">
+              <Leaf className="w-4 h-4 shrink-0" />
+              <span className="truncate">Movimiento anti-desperdicio en Cúcuta y su área metropolitana</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
               Salvemos la comida que aun es buena
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
               Conectamos restaurantes, panaderias y comercios de Cucuta con personas que quieren
               aprovechar excedentes de comida a precios increibles. Juntos reducimos el desperdicio alimentario.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" asChild className="text-base">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto w-full">
+              <Button size="lg" asChild className="text-sm sm:text-base w-full sm:w-auto justify-center h-12 sm:h-11">
                 <Link href="/censo">
-                  <Store className="w-5 h-5 mr-2" />
+                  <Store className="w-5 h-5 mr-2 shrink-0" />
                   Registra tu negocio
                 </Link>
               </Button>
-              <Button size="lg" variant="secondary" asChild className="text-base border border-border">
+              <Button size="lg" variant="secondary" asChild className="text-sm sm:text-base border border-border w-full sm:w-auto justify-center h-12 sm:h-11">
                 <Link href="/censo/campesinos">
-                  <Tractor className="w-5 h-5 mr-2 text-primary" />
+                  <Tractor className="w-5 h-5 mr-2 text-primary shrink-0" />
                   Soy productor del campo
                 </Link>
               </Button>
@@ -235,20 +238,29 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-16 sm:py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Eres comercio en Cucuta o su área metropolitana?
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 sm:mb-6">
+            ¿Tienes un comercio o eres productor del campo?
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Queremos conocerte. Completa nuestro censo para entender tus necesidades
-            y como podemos ayudarte a reducir el desperdicio mientras generas ingresos extra.
+            y cómo podemos ayudarte a reducir el desperdicio mientras generas ingresos extra.
           </p>
-          <Button size="lg" variant="secondary" asChild className="text-base">
-            <Link href="/censo">
-              Completar censo de negocio
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto">
+            <Button size="lg" variant="secondary" asChild className="text-sm sm:text-base w-full sm:w-auto justify-center h-12 sm:h-11">
+              <Link href="/censo">
+                <Store className="w-5 h-5 mr-2 shrink-0" />
+                Censo de comercios
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild className="text-sm sm:text-base bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 w-full sm:w-auto justify-center h-12 sm:h-11">
+              <Link href="/censo/campesinos">
+                <Tractor className="w-5 h-5 mr-2 shrink-0" />
+                Censo de campesinos
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

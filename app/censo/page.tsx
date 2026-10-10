@@ -13,18 +13,18 @@ export default function CensoPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-primary-foreground" />
+        <div className="max-w-4xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center">
+              <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl text-foreground">La Ñapa</span>
+            <span className="font-bold text-lg sm:text-xl text-foreground">La Ñapa</span>
           </Link>
 
-          <Button variant="outline" asChild size="sm">
+          <Button variant="outline" asChild size="sm" className="text-xs sm:text-sm px-2.5 sm:px-3 h-8 sm:h-9 shrink-0">
             <Link href="/censo/campesinos">
-              <Tractor className="w-4 h-4 mr-2" />
-              ¿Eres productor del campo?  Ir al Censo Campesino
+              <Tractor className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 text-primary shrink-0" />
+              <span>Censo <span className="hidden sm:inline">Productores / </span>Campesinos</span>
             </Link>
           </Button>
         </div>
