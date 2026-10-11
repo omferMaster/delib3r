@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Leaf, ArrowLeft, Heart } from "lucide-react"
 
 export const metadata = {
-  title: "Gracias por participar - delib3r",
+  title: "Gracias por participar - Delib3r",
   description: "Tu respuesta ha sido registrada exitosamente.",
 }
 
@@ -34,7 +34,7 @@ export default function GraciasPage() {
             </div>
             <p className="text-sm text-muted-foreground">
               Nos pondremos en contacto contigo pronto para contarte mas sobre la app 
-              y como puedes ser parte de los primeros comercios en unirse a delib3r.
+              y como puedes ser parte de los primeros comercios en unirse a Delib3r.
             </p>
           </div>
 

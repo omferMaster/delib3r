@@ -271,7 +271,7 @@ export function CensoTable({ comercios }: CensoTableProps) {
 
                         {/* Opinión sobre la app */}
                         <div>
-                          <h4 className="font-semibold text-foreground mb-3">Opinion sobre delib3r</h4>
+                          <h4 className="font-semibold text-foreground mb-3">Opinion sobre Delib3r</h4>
                           <div className="grid gap-2 text-sm">
                             <div className="flex justify-between items-center">
                               <span className="text-muted-foreground">Nivel de interes:</span>

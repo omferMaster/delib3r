@@ -4,7 +4,7 @@ import { CensoForm } from "@/components/censo-form"
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "Censo de Comercios - delib3r",
+  title: "Censo de Comercios - Delib3r",
   description: "Registra tu negocio y cuentanos sobre tus excedentes de comida. Juntos podemos reducir el desperdicio alimentario en Cucuta.",
 }
 
@@ -18,7 +18,7 @@ export default function CensoPage() {
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center">
               <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-lg sm:text-xl text-foreground">delib3r</span>
+            <span className="font-bold text-lg sm:text-xl text-foreground">Delib3r</span>
           </Link>
 
           <Button variant="outline" asChild size="sm" className="text-xs sm:text-sm px-2.5 sm:px-3 h-8 sm:h-9 shrink-0">
