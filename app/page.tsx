@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Leaf, ShoppingBag, Store, Tractor, TrendingDown, Users, Utensils } from "lucide-react"
+import { ComoFuncionaSection } from "@/components/como-funciona-section"
 
 export default function HomePage() {
   return (
@@ -99,49 +100,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section id="como-funciona" className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Como funciona</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Un proceso simple para salvar comida y ahorrar dinero
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Store,
-                title: "El comercio publica",
-                description: "Restaurantes y panaderias publican sus excedentes del dia a precios reducidos",
-              },
-              {
-                icon: ShoppingBag,
-                title: "Tu reservas",
-                description: "Explora las ofertas cerca de ti y reserva tu bolsa sorpresa con descuentos hasta del 70%",
-              },
-              {
-                icon: Utensils,
-                title: "Recoges y disfrutas",
-                description: "Pasa por el local en el horario indicado, recoge tu pedido y disfruta comida deliciosa",
-              },
-            ].map((step, index) => (
-              <Card key={index} className="relative overflow-hidden group hover:shadow-lg transition-shadow">
-                <CardContent className="pt-8 pb-6 px-6">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <step.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <div className="absolute top-4 right-4 text-6xl font-bold text-muted/30">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* How it works - interactive */}
+      <ComoFuncionaSection />
 
       {/* Benefits Section */}
       <section id="beneficios" className="py-20 bg-muted/50">
