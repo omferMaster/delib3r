@@ -156,7 +156,7 @@ type FormData = {
   recibe_asistencia_tecnica: boolean
   fuente_asistencia: string
 
-  // Paso 4: Opinión sobre La Ñapa
+  // Paso 4: Opinión sobre delib3r
   interes_app: string
   condiciones_para_participar: string[]
   condicion_otro: string
@@ -744,7 +744,7 @@ export function CensoCampesinoForm() {
           {currentStep === 3 && (
             <div className="space-y-6">
               <div className="space-y-2">
-                <Label>¿Qué tan interesado estarías en vender excedentes a través de La Ñapa? *</Label>
+                <Label>¿Qué tan interesado estarías en vender excedentes a través de delib3r? *</Label>
                 <RadioGroup
                   value={formData.interes_app}
                   onValueChange={val => updateField("interes_app", val)}

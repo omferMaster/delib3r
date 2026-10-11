@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'La Ñapa - Lo bueno que sobra, a precio de ñapa',
+  title: 'delib3r - Lo bueno que sobra, a precio justo',
   description: 'Conectamos restaurantes, panaderias y comercios de Cucuta con personas que quieren aprovechar excedentes de comida a precios increibles. Reduce el desperdicio alimentario.',
   generator: 'v0.app',
 }

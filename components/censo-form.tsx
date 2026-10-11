@@ -554,7 +554,7 @@ export function CensoForm() {
             <div className="space-y-6">
               <Card className="bg-primary/5 border-primary/20">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-base text-primary">Sobre La Ñapa</CardTitle>
+                  <CardTitle className="text-base text-primary">Sobre delib3r</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-foreground/80">

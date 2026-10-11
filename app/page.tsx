@@ -13,7 +13,7 @@ export default function HomePage() {
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <Leaf className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl text-foreground">La Ñapa</span>
+            <span className="font-bold text-xl text-foreground">delib3r</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#como-funciona" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -272,10 +272,10 @@ export default function HomePage() {
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
                 <Leaf className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="font-bold text-lg">La Ñapa</span>
+              <span className="font-bold text-lg">delib3r</span>
             </div>
             <p className="text-background/60 text-sm">
-              Lo bueno que sobra, a precio de ñapa. Hecho para Cucuta.
+              Lo bueno que sobra, a precio justo. Hecho para Cucuta.
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ import { CampesinosTable, CensoCampesino } from "@/components/admin/campesinos-t
 import { StatsCards } from "@/components/admin/stats-cards"
 
 export const metadata = {
-  title: "Panel Admin - La Ñapa",
+  title: "Panel Admin - delib3r",
   description: "Dashboard administrativo para gestionar el censo de comercios y campesinos",
 }
 
@@ -89,7 +89,7 @@ export default async function AdminPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <h1 className="text-2xl font-bold text-foreground">Panel Administrativo</h1>
-              <p className="text-muted-foreground">La Ñapa - Gestión de censos de Comercios y Campesinos</p>
+              <p className="text-muted-foreground">delib3r - Gestión de censos de Comercios y Campesinos</p>
             </div>
             <div className="flex items-center gap-2">
               <Badge variant="outline" className="text-primary border-primary">
